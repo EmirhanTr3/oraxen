@@ -16,12 +16,10 @@ jobs:
         run: chmod +x gradlew
       - name: Publish with Gradle
         run: ./gradlew core:build
-      - name: See all files in die
-        run: ls -lah ~/v1_21_R1
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         if: success()
         with:
           name: oraxen
-          path: jars
+          path: core/build/libs
           
