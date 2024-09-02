@@ -1,3 +1,4 @@
+```
 name: Publish project to Maven repository
 # OR, publish per each commit
 on:
@@ -17,10 +18,11 @@ jobs:
       - name: Publish with Gradle
         run: ./gradlew core:build
       - name: See all files in die
-        run: ls -lah
+        run: ls -lah ~/v1_21_R1
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         if: success()
         with:
           name: oraxen
           path: jars
+```
