@@ -16,6 +16,8 @@ jobs:
         run: chmod +x gradlew
       - name: Publish with Gradle
         run: ./gradlew core:build
+      - name: See all files in die
+        run: ls -lah
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         if: success()
