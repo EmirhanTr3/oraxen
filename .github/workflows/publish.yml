@@ -21,5 +21,5 @@ jobs:
         if: success()
         with:
           name: oraxen
-          path: core/build/libs
+          path: v1_21_R1/build/libs
           
